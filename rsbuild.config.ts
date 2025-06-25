@@ -5,7 +5,7 @@ import { pluginLess } from '@rsbuild/plugin-less';
 export default defineConfig({
   html: {
     favicon: './src/assets/Vae.jpg',
-    title: '☁️时光刻录机☁️',
+    title: '我们的时光故事',
   },
   output: {
     assetPrefix: '/time/',

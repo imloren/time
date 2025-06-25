@@ -27,14 +27,40 @@ const App = () => {
     <div className={styles['App-wrapper']}>
       <Container className="home-wrapper" maxWidth="sm">
         <Box className="container" sx={{ pt: 4 }} bgcolor="transparent">
-          <Typography color="textPrimary" align="center" component="div">
-            <div className="xiangshi time-text">相识：{know}</div>
+          <Typography
+            variant="h3"
+            color="textPrimary"
+            align="center"
+            component="h1"
+            sx={{ mb: 2, fontWeight: 500 }}
+          >
+            <div
+              style={{
+                background: 'linear-gradient(45deg, #7e57c2 30%, #5e35b1 90%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              我们的故事
+            </div>
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color="textSecondary"
+            align="center"
+            component="p"
+            sx={{ mb: 4 }}
+          >
+            时光荏苒，爱意永恒
           </Typography>
           <Typography color="textPrimary" align="center" component="div">
-            <div className="love time-text">相恋：{love}</div>
+            <div className="xiangshi time-text">初见：{know}</div>
           </Typography>
           <Typography color="textPrimary" align="center" component="div">
-            <div className="wedding time-text">结婚：{weddingDay}</div>
+            <div className="love time-text">心动：{love}</div>
+          </Typography>
+          <Typography color="textPrimary" align="center" component="div">
+            <div className="wedding time-text">执手：{weddingDay}</div>
           </Typography>
         </Box>
       </Container>
