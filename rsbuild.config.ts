@@ -9,6 +9,12 @@ export default defineConfig({
   },
   output: {
     assetPrefix: '/time/',
+    filenameHash: true,
+  },
+  performance: {
+    chunkSplit: {
+      strategy: 'split-by-experience',
+    },
   },
   plugins: [pluginReact(), pluginLess()],
 });
