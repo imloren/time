@@ -4,7 +4,7 @@ import { pluginLess } from '@rsbuild/plugin-less';
 
 export default defineConfig({
   html: {
-    favicon: 'https://cdn.jsdelivr.net/gh/imloren/cdn@main/img/Vae.jpg',
+    favicon: 'https://cdn.jsdelivr.net/gh/imloren/cdn@main/img/buzzLight.webp',
     title: '我们的时光故事',
   },
   output: {
