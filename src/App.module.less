@@ -1,11 +1,5 @@
 :global {
-  @font-face {
-    font-family: 'lxgwwk';
-    src: url('https://cdn.jsdelivr.net/gh/imloren/cdn@main/fonts/lxgwwk.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+  // 字体定义已移至 global.less 文件中，避免重复定义
 
   * {
     font-family:
@@ -255,21 +249,179 @@
 }
 
 // 响应式设计
-@media (max-width: 600px) {
+// 大屏设备 (1200px+)
+@media (min-width: 1200px) {
   .App-wrapper {
     :global {
       .home-wrapper {
         .container {
-          padding: 32px !important;
-          margin: 16px;
-          border-radius: 20px;
+          padding: 56px !important;
+          max-width: 600px;
         }
 
         .time-text {
-          font-size: 17px;
-          padding: 14px 24px;
-          margin: 20px 0;
+          font-size: 21px;
+          padding: 18px 36px;
+          margin: 32px 0;
         }
+      }
+    }
+  }
+}
+
+// 中等设备 (768px - 1199px)
+@media (min-width: 768px) and (max-width: 1199px) {
+  .App-wrapper {
+    :global {
+      .home-wrapper {
+        .container {
+          padding: 40px !important;
+          margin: 20px;
+        }
+
+        .time-text {
+          font-size: 18px;
+          padding: 15px 28px;
+          margin: 24px 0;
+        }
+      }
+    }
+  }
+}
+
+// 小屏设备 (480px - 767px)
+@media (min-width: 480px) and (max-width: 767px) {
+  .App-wrapper {
+    :global {
+      .home-wrapper {
+        .container {
+          padding: 28px !important;
+          margin: 12px;
+          border-radius: 18px;
+        }
+
+        .time-text {
+          font-size: 16px;
+          padding: 12px 20px;
+          margin: 18px 0;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+// 超小屏设备 (320px - 479px)
+@media (max-width: 479px) {
+  .App-wrapper {
+    :global {
+      .home-wrapper {
+        .container {
+          padding: 20px !important;
+          margin: 8px;
+          border-radius: 16px;
+          
+          &::before {
+            font-size: 28px;
+            top: -15px;
+          }
+        }
+
+        .time-text {
+          font-size: 14px;
+          padding: 10px 16px;
+          margin: 14px 0;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}
+
+// 极小屏设备 (最小 320px)
+@media (max-width: 374px) {
+  .App-wrapper {
+    :global {
+      .home-wrapper {
+        .container {
+          padding: 16px !important;
+          margin: 4px;
+          border-radius: 12px;
+        }
+
+        .time-text {
+          font-size: 13px;
+          padding: 8px 12px;
+          margin: 12px 0;
+          letter-spacing: 0.3px;
+        }
+      }
+    }
+  }
+}
+
+// 移动端图片优化
+@media (max-width: 767px) {
+  .App-wrapper {
+    :global {
+      .left-image,
+      .right-image {
+        width: 45px !important;
+        height: 45px !important;
+        margin: 0 10px !important;
+      }
+      
+      .MuiTypography-h3 {
+        font-size: 1.8rem !important;
+      }
+      
+      .MuiTypography-subtitle1 {
+        font-size: 0.9rem !important;
+        margin-bottom: 2rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .App-wrapper {
+    :global {
+      .left-image,
+      .right-image {
+        width: 38px !important;
+        height: 38px !important;
+        margin: 0 8px !important;
+      }
+      
+      .MuiTypography-h3 {
+        font-size: 1.5rem !important;
+      }
+      
+      .MuiTypography-subtitle1 {
+        font-size: 0.8rem !important;
+        margin-bottom: 1.5rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .App-wrapper {
+    :global {
+      .left-image,
+      .right-image {
+        width: 32px !important;
+        height: 32px !important;
+        margin: 0 6px !important;
+      }
+      
+      .MuiTypography-h3 {
+        font-size: 1.2rem !important;
+      }
+      
+      .MuiTypography-subtitle1 {
+        font-size: 0.75rem !important;
+        margin-bottom: 1rem !important;
       }
     }
   }
