@@ -1,6 +1,6 @@
 import { defineConfig } from '@rsbuild/core'
-import { pluginReact } from '@rsbuild/plugin-react'
 import { pluginLess } from '@rsbuild/plugin-less'
+import { pluginReact } from '@rsbuild/plugin-react'
 
 export default defineConfig({
   html: {
@@ -13,36 +13,6 @@ export default defineConfig({
       'apple-mobile-web-app-status-bar-style': 'default',
       'apple-mobile-web-app-title': '我们的时光故事',
     },
-    tags: [
-      // 预加载字体文件，提高加载速度并启用缓存
-      {
-        tag: 'link',
-        attrs: {
-          rel: 'preload',
-          href: 'https://cdn.jsdelivr.net/gh/imloren/cdn@main/fonts/lxgwwk.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous',
-        },
-      },
-      // DNS 预解析，加速字体 CDN 连接
-      {
-        tag: 'link',
-        attrs: {
-          rel: 'dns-prefetch',
-          href: 'https://cdn.jsdelivr.net',
-        },
-      },
-      // 预连接字体 CDN，建立早期连接
-      {
-        tag: 'link',
-        attrs: {
-          rel: 'preconnect',
-          href: 'https://cdn.jsdelivr.net',
-          crossorigin: 'anonymous',
-        },
-      },
-    ],
   },
   output: {
     assetPrefix: '/time/',

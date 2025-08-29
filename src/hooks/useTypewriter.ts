@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface UseTypewriterOptions {
   speed?: number // 打字速度，毫秒

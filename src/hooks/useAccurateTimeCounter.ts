@@ -5,7 +5,7 @@ const useAccurateTimeCounter = (targetDates: string[]) => {
 
   // 预计算目标时间戳，避免重复解析
   const targetTimestamps = useMemo(
-    () => targetDates.map(date => new Date(date).getTime()),
+    () => targetDates.map((date) => new Date(date).getTime()),
     [targetDates]
   )
 
@@ -37,7 +37,7 @@ const useAccurateTimeCounter = (targetDates: string[]) => {
 
   // 计算每个时间差
   return useMemo(() => {
-    return targetTimestamps.map(targetTime => {
+    return targetTimestamps.map((targetTime) => {
       const diff = currentTime - targetTime
       const days = Math.floor(diff / 86400000)
       const hours = Math.floor((diff % 86400000) / 3600000)

@@ -1,14 +1,17 @@
+import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
-import { useAccurateTimeCounter, useTypewriter } from './hooks'
 import styles from './App.module.less'
+import { useAccurateTimeCounter, useTypewriter } from './hooks'
 
 const App = () => {
   const [know, love, weddingDay] = useAccurateTimeCounter(['9 4,2015', '2 5,2016', '8 22,2023'])
 
   const title = useTypewriter('我们的故事', { speed: 150, delay: 500 })
-  const subtitle = useTypewriter('时光荏苒，爱意永恒。', { speed: 100, delay: 2000 })
+  const subtitle = useTypewriter('时光荏苒，爱意永恒。', {
+    speed: 100,
+    delay: 2000,
+  })
 
   return (
     <div className={styles['App-wrapper']}>
