@@ -14,19 +14,19 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.2",
+    "@biomejs/biome": "^2.3.6",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.3.2",
-    "@rsbuild/core": "^1.5.3",
+    "@mui/material": "^7.3.5",
+    "@rsbuild/core": "^1.6.7",
     "@rsbuild/plugin-less": "^1.5.0",
-    "@rsbuild/plugin-react": "^1.4.0",
-    "@types/react": "^19.1.12",
-    "@types/react-dom": "^19.1.9",
-    "typescript": "^5.9.2"
+    "@rsbuild/plugin-react": "^1.4.2",
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
   }
 }
