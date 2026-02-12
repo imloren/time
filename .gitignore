@@ -7,5 +7,4 @@
 *.tsbuildinfo
 dist/
 node_modules
-pack
 package-lock.json

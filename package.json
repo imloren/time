@@ -2,6 +2,7 @@
   "name": "time-record",
   "private": true,
   "version": "1.0.0",
+  "packageManager": "pnpm@10",
   "engines": {
     "node": ">=22.0.0"
   },
