@@ -1,13 +1,11 @@
-# Local
 .DS_Store
-*.local
-*.log*
-
-# Dist
-node_modules
-dist/
-
-# IDE
+.idea
 .vscode/*
 !.vscode/extensions.json
-.idea
+*.local
+*.log*
+*.tsbuildinfo
+dist/
+node_modules
+pack
+package-lock.json
