@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className={styles['App-wrapper']}>
       <Container className='home-wrapper' maxWidth='sm'>
-      <Box className='container' sx={{ pt: 4, backgroundColor: 'transparent' }}>
+        <Box className='container' sx={{ pt: 4, backgroundColor: 'transparent' }}>
           <Box
             sx={{
               display: 'flex',
