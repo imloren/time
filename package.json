@@ -19,11 +19,11 @@
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.16",
+    "@biomejs/biome": "^2.5.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^9.1.0",
-    "@rsbuild/core": "^2.0.11",
+    "@mui/material": "^9.1.1",
+    "@rsbuild/core": "^2.0.14",
     "@rsbuild/plugin-less": "^1.6.4",
     "@rsbuild/plugin-react": "^2.0.1",
     "@types/react": "^19.2.17",
