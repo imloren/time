@@ -23,7 +23,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^9.1.2",
-    "@rsbuild/core": "^2.0.15",
+    "@rsbuild/core": "^2.1.2",
     "@rsbuild/plugin-less": "^2.0.0",
     "@rsbuild/plugin-react": "^2.1.0",
     "@types/react": "^19.2.17",
