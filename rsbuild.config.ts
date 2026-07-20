@@ -6,8 +6,7 @@ export default defineConfig({
   html: {
     title: '我们的时光故事',
     meta: {
-      viewport:
-        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
+      viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
       'format-detection': 'telephone=no',
       'mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'default',

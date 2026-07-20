@@ -5,22 +5,22 @@
     "": {
       "name": "time-record",
       "dependencies": {
-        "react": "latest",
-        "react-dom": "latest"
+        "react": "^19.2.7",
+        "react-dom": "^19.2.7",
       },
       "devDependencies": {
-        "@biomejs/biome": "latest",
-        "@emotion/react": "latest",
-        "@emotion/styled": "latest",
-        "@mui/material": "latest",
-        "@rsbuild/core": "latest",
-        "@rsbuild/plugin-less": "latest",
-        "@rsbuild/plugin-react": "latest",
-        "@types/react": "latest",
-        "@types/react-dom": "latest",
-        "typescript": "latest"
-      }
-    }
+        "@biomejs/biome": "^2.5.4",
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.1",
+        "@mui/material": "^9.2.0",
+        "@rsbuild/core": "^2.1.6",
+        "@rsbuild/plugin-less": "^2.0.1",
+        "@rsbuild/plugin-react": "^2.1.0",
+        "@types/react": "^19.2.17",
+        "@types/react-dom": "^19.2.3",
+        "typescript": "^7.0.2",
+      },
+    },
   },
   "packages": {
     "@babel/code-frame": ["@babel/code-frame@7.29.0", "", { "dependencies": { "@babel/helper-validator-identifier": "^7.28.5", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw=="],
