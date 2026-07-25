@@ -15,15 +15,15 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.4",
+    "@biomejs/biome": "^2.5.5",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^9.2.0",
-    "@rsbuild/core": "^2.1.6",
+    "@rsbuild/core": "^2.1.8",
     "@rsbuild/plugin-less": "^2.0.1",
     "@rsbuild/plugin-react": "^2.1.0",
     "@types/react": "^19.2.17",
