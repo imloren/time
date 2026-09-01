@@ -1,0 +1,19 @@
+.github/workflows/ci.yml
+  s_44dd3f484ad827::t_b0e63ec87361e8 40,43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "2188d7a8d2a54e80b414eb4790e7d5bf39505405",
+  "prompts": {},
+  "sessions": {
+    "s_44dd3f484ad827": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "8238b62e-237d-4d0a-bc50-21342955e16b",
+        "model": "grok-4.6"
+      },
+      "human_author": "Loren <x>"
+    }
+  }
+}
