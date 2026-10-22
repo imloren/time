@@ -19,6 +19,13 @@ const useTypewriter = (text: string, options: UseTypewriterOptions = {}) => {
       cancelAnimationFrame(animationRef.current)
     }
 
+    // 遵循减少动态偏好：直接呈现全文，不逐字播放
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setDisplayedText(text)
+      setIsComplete(true)
+      return
+    }
+
     if (!text) {
       setDisplayedText('')
       setIsComplete(false)

@@ -14,7 +14,7 @@ const App = () => {
   })
 
   return (
-    <div className={styles['App-wrapper']}>
+    <main className={styles['App-wrapper']}>
       <Container className='home-wrapper' maxWidth='sm'>
         <Box className='container' sx={{ pt: 4, backgroundColor: 'transparent' }}>
           <Box
@@ -24,29 +24,35 @@ const App = () => {
               justifyContent: 'center',
               mb: 2,
               minHeight: '80px',
-              '&:hover .left-image': {
-                transform: 'scaleX(-1) scale(1.1) rotate(-15deg) !important',
-                boxShadow: '0 0 30px rgba(126, 87, 194, 0.6) !important',
-              },
-              '&:hover .right-image': {
-                transform: 'scale(1.1) rotate(-15deg) !important',
-                boxShadow: '0 0 30px rgba(94, 53, 177, 0.6) !important',
+              // 悬停效果只在支持悬停的指针设备上生效，避免触屏粘滞
+              '@media (hover: hover)': {
+                '&:hover .left-image': {
+                  transform: 'scaleX(-1) scale(1.1) rotate(-15deg) !important',
+                  boxShadow:
+                    '0 0 30px color-mix(in srgb, var(--color-accent) 60%, transparent) !important',
+                },
+                '&:hover .right-image': {
+                  transform: 'scale(1.1) rotate(-15deg) !important',
+                  boxShadow:
+                    '0 0 30px color-mix(in srgb, var(--color-accent-strong) 60%, transparent) !important',
+                },
               },
             }}
           >
             <img
               className='left-image'
               src='https://cdn.jsdelivr.net/gh/imloren/cdn@main/imgs/1.jpg'
-              alt='左侧图片'
+              alt=''
               style={{
+                flex: '0 0 auto',
                 width: '60px',
                 height: '60px',
                 borderRadius: '50%',
                 objectFit: 'cover',
                 marginRight: '20px',
                 animation: 'heartbeat 2s ease-in-out infinite, fadeInLeft 1s ease-out',
-                boxShadow: '0 0 20px rgba(126, 87, 194, 0.3)',
-                border: '2px solid rgba(126, 87, 194, 0.2)',
+                boxShadow: '0 0 20px color-mix(in srgb, var(--color-accent) 30%, transparent)',
+                border: '2px solid color-mix(in srgb, var(--color-accent) 20%, transparent)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                 transform: 'scaleX(-1)',
               }}
@@ -56,6 +62,7 @@ const App = () => {
               color='textPrimary'
               align='center'
               component='h1'
+              aria-label='我们的故事'
               sx={{
                 fontWeight: 500,
                 flex: 1,
@@ -64,30 +71,34 @@ const App = () => {
                 justifyContent: 'center',
               }}
             >
-              <div
+              <span
+                aria-hidden='true'
                 style={{
-                  background: 'linear-gradient(45deg, #7e57c2 30%, #5e35b1 90%)',
+                  background:
+                    'linear-gradient(45deg, var(--color-accent) 30%, var(--color-accent-strong) 90%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                 }}
               >
                 {title.displayedText}
                 {!title.isComplete && <span className='cursor'>|</span>}
-              </div>
+              </span>
             </Typography>
             <img
               className='right-image'
               src='https://cdn.jsdelivr.net/gh/imloren/cdn@main/imgs/2.jpg'
-              alt='右侧图片'
+              alt=''
               style={{
+                flex: '0 0 auto',
                 width: '60px',
                 height: '60px',
                 borderRadius: '50%',
                 objectFit: 'cover',
                 marginLeft: '20px',
                 animation: 'heartbeat 2s ease-in-out infinite 0.5s, fadeInRight 1s ease-out',
-                boxShadow: '0 0 20px rgba(94, 53, 177, 0.3)',
-                border: '2px solid rgba(94, 53, 177, 0.2)',
+                boxShadow:
+                  '0 0 20px color-mix(in srgb, var(--color-accent-strong) 30%, transparent)',
+                border: '2px solid color-mix(in srgb, var(--color-accent-strong) 20%, transparent)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               }}
             />
@@ -99,8 +110,11 @@ const App = () => {
             component='p'
             sx={{ mb: 4, minHeight: '30px' }}
           >
-            {subtitle.displayedText}
-            {!subtitle.isComplete && subtitle.displayedText && <span className='cursor'>|</span>}
+            <span className='sr-only'>时光荏苒，爱意永恒。</span>
+            <span aria-hidden='true'>
+              {subtitle.displayedText}
+              {!subtitle.isComplete && subtitle.displayedText && <span className='cursor'>|</span>}
+            </span>
           </Typography>
           <Typography color='textPrimary' align='center' component='div'>
             <div className='xiangshi time-text'>初见：{know}</div>
@@ -113,7 +127,7 @@ const App = () => {
           </Typography>
         </Box>
       </Container>
-    </div>
+    </main>
   )
 }
 

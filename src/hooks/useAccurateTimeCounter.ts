@@ -45,7 +45,7 @@ const useAccurateTimeCounter = (targetDates: string[]) => {
       const seconds = Math.floor((((diff % 86400000) % 3600000) % 60000) / 1000)
 
       const pad = (num: number) => num.toString().padStart(2, '0')
-      return `${days}天${hours}时${pad(minutes)}分${pad(seconds)}秒`
+      return `${days}天${pad(hours)}时${pad(minutes)}分${pad(seconds)}秒`
     })
   }, [currentTime, targetTimestamps])
 }

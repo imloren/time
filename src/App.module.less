@@ -12,6 +12,7 @@
 
 .App-wrapper {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,9 +27,9 @@
     width: 100%;
     height: 100%;
     background-image:
-      radial-gradient(circle at 20% 80%, rgba(66, 165, 245, 0.2) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(236, 64, 122, 0.2) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(171, 71, 188, 0.15) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, var(--color-bg-glow-blue) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, var(--color-bg-glow-pink) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, var(--color-bg-glow-purple) 0%, transparent 50%);
     animation: floatingBg 20s ease-in-out infinite;
     z-index: -1;
   }
@@ -49,13 +50,13 @@
   :global {
     .home-wrapper {
       .container {
-        background: rgba(255, 255, 255, 0.95);
+        background: var(--color-bg-surface);
         backdrop-filter: blur(20px);
         border-radius: 24px;
         padding: 48px !important;
         box-shadow:
-          0 20px 40px rgba(0, 0, 0, 0.1),
-          0 0 0 1px rgba(255, 255, 255, 0.5);
+          0 20px 40px rgb(var(--black-rgb) / 0.1),
+          0 0 0 1px rgb(var(--white-rgb) / 0.5);
         position: relative;
         overflow: visible;
 
@@ -83,11 +84,14 @@
 
       .time-text {
         margin: 28px 0;
-        font-size: 19px;
-        letter-spacing: 1.5px;
+        font-size: 1.1875rem;
+        letter-spacing: 0.079em;
+        font-variant-numeric: tabular-nums;
         padding: 16px 32px;
         border-radius: 16px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+          transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+          box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
         font-weight: 400;
@@ -100,24 +104,27 @@
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+          background: linear-gradient(90deg, transparent, rgb(var(--white-rgb) / 0.4), transparent);
           transition: left 0.6s ease;
         }
 
-        &:hover {
-          transform: translateY(-3px) scale(1.02);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        @media (hover: hover) {
+          &:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 24px rgb(var(--black-rgb) / 0.12);
 
-          &::before {
-            left: 100%;
+            &::before {
+              left: 100%;
+            }
           }
         }
       }
 
       .xiangshi {
-        background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
-        color: white;
-        box-shadow: 0 4px 20px rgba(66, 165, 245, 0.3);
+        // 白字对比度：--blue-700 为 4.60:1、--blue-800 为 5.75:1，均达 WCAG AA 4.5:1
+        background: linear-gradient(135deg, var(--color-category-meet-from) 0%, var(--color-category-meet-to) 100%);
+        color: var(--color-text-on-accent);
+        box-shadow: 0 4px 20px color-mix(in srgb, var(--color-category-meet-from) 30%, transparent);
 
         &::after {
           content: '✨';
@@ -126,9 +133,10 @@
       }
 
       .love {
-        background: linear-gradient(135deg, #ff8a80 0%, #ff5252 100%);
-        color: white;
-        box-shadow: 0 4px 20px rgba(255, 82, 82, 0.3);
+        // 白字对比度：--red-600 为 4.98:1、--red-700 为 5.62:1
+        background: linear-gradient(135deg, var(--color-category-love-from) 0%, var(--color-category-love-to) 100%);
+        color: var(--color-text-on-accent);
+        box-shadow: 0 4px 20px color-mix(in srgb, var(--color-category-love-from) 30%, transparent);
 
         &::after {
           content: '💗';
@@ -137,9 +145,10 @@
       }
 
       .wedding {
-        background: linear-gradient(135deg, #ba68c8 0%, #ab47bc 100%);
-        color: white;
-        box-shadow: 0 4px 20px rgba(186, 104, 200, 0.3);
+        // 白字对比度：--purple-500 为 6.30:1、--purple-700 为 8.20:1
+        background: linear-gradient(135deg, var(--color-category-wedding-from) 0%, var(--color-category-wedding-to) 100%);
+        color: var(--color-text-on-accent);
+        box-shadow: 0 4px 20px color-mix(in srgb, var(--color-category-wedding-from) 30%, transparent);
 
         &::after {
           content: '💍';
@@ -165,10 +174,10 @@
     height: 100%;
     pointer-events: none;
     background-image:
-      radial-gradient(3px 3px at 20% 30%, rgba(255, 255, 255, 0.8), transparent),
-      radial-gradient(4px 4px at 60% 70%, rgba(255, 255, 255, 0.6), transparent),
-      radial-gradient(2px 2px at 50% 50%, rgba(255, 255, 255, 0.7), transparent),
-      radial-gradient(3px 3px at 80% 10%, rgba(255, 255, 255, 0.5), transparent);
+      radial-gradient(3px 3px at 20% 30%, rgb(var(--white-rgb) / 0.8), transparent),
+      radial-gradient(4px 4px at 60% 70%, rgb(var(--white-rgb) / 0.6), transparent),
+      radial-gradient(2px 2px at 50% 50%, rgb(var(--white-rgb) / 0.7), transparent),
+      radial-gradient(3px 3px at 80% 10%, rgb(var(--white-rgb) / 0.5), transparent);
     background-size: 300px 300px;
     background-position:
       0 0,
@@ -201,7 +210,7 @@
         }
 
         .time-text {
-          font-size: 21px;
+          font-size: 1.3125rem;
           padding: 18px 36px;
           margin: 32px 0;
         }
@@ -221,7 +230,7 @@
         }
 
         .time-text {
-          font-size: 18px;
+          font-size: 1.125rem;
           padding: 15px 28px;
           margin: 24px 0;
         }
@@ -242,10 +251,10 @@
         }
 
         .time-text {
-          font-size: 16px;
+          font-size: 1rem;
           padding: 12px 20px;
           margin: 18px 0;
-          letter-spacing: 1px;
+          letter-spacing: 0.0625em;
         }
       }
     }
@@ -269,10 +278,10 @@
         }
 
         .time-text {
-          font-size: 14px;
+          font-size: 0.875rem;
           padding: 10px 16px;
           margin: 14px 0;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.036em;
         }
       }
     }
@@ -291,10 +300,10 @@
         }
 
         .time-text {
-          font-size: 13px;
+          font-size: 0.8125rem;
           padding: 8px 12px;
           margin: 12px 0;
-          letter-spacing: 0.3px;
+          letter-spacing: 0.023em;
         }
       }
     }
@@ -305,7 +314,12 @@
 @media (max-width: 767px) {
   .App-wrapper {
     :global {
-      .left-image,
+      .left-image {
+        width: 45px !important;
+        height: 45px !important;
+        margin: 0 10px !important;
+      }
+
       .right-image {
         width: 45px !important;
         height: 45px !important;
@@ -327,7 +341,12 @@
 @media (max-width: 479px) {
   .App-wrapper {
     :global {
-      .left-image,
+      .left-image {
+        width: 38px !important;
+        height: 38px !important;
+        margin: 0 8px !important;
+      }
+
       .right-image {
         width: 38px !important;
         height: 38px !important;
@@ -349,7 +368,12 @@
 @media (max-width: 374px) {
   .App-wrapper {
     :global {
-      .left-image,
+      .left-image {
+        width: 32px !important;
+        height: 32px !important;
+        margin: 0 6px !important;
+      }
+
       .right-image {
         width: 32px !important;
         height: 32px !important;
@@ -381,8 +405,8 @@
 }
 
 .App-wrapper :global(.time-text) {
-  opacity: 0;
-  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  // 初始透明只写在 keyframes 的 from 中，动画被禁用时内容仍可见
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
 
   &:nth-child(1) {
     animation-delay: 0.2s;
@@ -397,20 +421,23 @@
 
 // 容器淡入
 .App-wrapper :global(.container) {
-  opacity: 0;
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
 }
 
 // 容器悬停效果
 .App-wrapper :global(.container) {
   position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow:
-      0 30px 60px rgba(0, 0, 0, 0.12),
-      0 0 0 1px rgba(255, 255, 255, 0.8);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 30px 60px rgb(var(--black-rgb) / 0.12),
+        0 0 0 1px rgb(var(--white-rgb) / 0.8);
+    }
   }
 }
 
@@ -431,144 +458,6 @@
   51%,
   100% {
     opacity: 0;
-  }
-}
-
-// 爱情主题图片动画
-.love-image-left {
-  position: relative !important;
-  animation:
-    gentleFloat 3s ease-in-out infinite,
-    heartPulse 2s ease-in-out infinite;
-
-  &::before {
-    content: '💕';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 16px;
-    opacity: 0;
-    animation: loveParticle 4s ease-in-out infinite;
-    animation-delay: 0.5s;
-    z-index: 10;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgba(255, 182, 193, 0.6);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: loveRipple 3s ease-out infinite;
-    animation-delay: 1s;
-    z-index: 1;
-  }
-}
-
-.love-image-right {
-  position: relative !important;
-  animation:
-    gentleFloat 3s ease-in-out infinite reverse,
-    heartPulse 2s ease-in-out infinite;
-  animation-delay: 0.5s;
-
-  &::before {
-    content: '💖';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    font-size: 16px;
-    opacity: 0;
-    animation: loveParticle 4s ease-in-out infinite;
-    animation-delay: 2s;
-    z-index: 10;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgba(255, 182, 193, 0.6);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: loveRipple 3s ease-out infinite;
-    animation-delay: 2.5s;
-    z-index: 1;
-  }
-}
-
-// 轻柔浮动动画
-@keyframes gentleFloat {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-5px) rotate(1deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-3px) rotate(-1deg);
-  }
-}
-
-// 心跳脉动动画
-@keyframes heartPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-// 爱心粒子动画
-@keyframes loveParticle {
-  0% {
-    opacity: 0;
-    transform: translateY(0) scale(0.5);
-  }
-  30% {
-    opacity: 1;
-    transform: translateY(-10px) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-30px) scale(0.3);
-  }
-}
-
-// 爱心涟漪动画
-@keyframes loveRipple {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(2);
-    opacity: 0;
-  }
-}
-
-// 悬停时的特殊效果
-.love-image-left:hover,
-.love-image-right:hover {
-  animation-play-state: paused;
-
-  &::before {
-    animation-play-state: paused;
-    opacity: 1 !important;
-    transform: translateY(-15px) scale(1.2) !important;
   }
 }
 
@@ -602,5 +491,16 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+// 减少动态偏好：停掉无限循环与位移/缩放动画，仅保留即时呈现
+@media (prefers-reduced-motion: reduce) {
+  :global(*),
+  :global(*::before),
+  :global(*::after) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
