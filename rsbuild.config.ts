@@ -5,13 +5,13 @@ import { pluginReact } from '@rsbuild/plugin-react'
 export default defineConfig({
   html: {
     template: './index.html',
-    title: '我们的时光故事',
+    title: '我们的故事 · 从初见，到余生',
     meta: {
       viewport: 'width=device-width, initial-scale=1.0',
       'format-detection': 'telephone=no',
       'mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'default',
-      'apple-mobile-web-app-title': '我们的时光故事',
+      'apple-mobile-web-app-title': '我们的故事',
     },
   },
   server: {
