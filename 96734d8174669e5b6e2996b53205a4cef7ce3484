@@ -1,0 +1,53 @@
+index.html
+  s_d83d7d67c7b301::t_88b6e4126f702f 1-7
+rsbuild.config.ts
+  s_d83d7d67c7b301::t_c3dc93fdf1d9a0 7,10
+src/hooks/useTypewriter.ts
+  s_d83d7d67c7b301::t_ffae4c39e5d8ea 22-28
+src/App.tsx
+  s_d83d7d67c7b301::t_b1b0daf2b6d306 17
+  s_d83d7d67c7b301::t_aeb7d6f7392584 74-75,85
+  s_d83d7d67c7b301::t_c8588ab72e9b98 113-117
+  s_d83d7d67c7b301::t_e0ca42ad6df891 90,92
+  s_d83d7d67c7b301::t_4f936a8979c6aa 27-30,33-35,38
+  s_d83d7d67c7b301::t_f8c8384d2191d0 31-32,36-37,77-78,99-100
+  s_d83d7d67c7b301::t_e95770a091f2f9 65
+  s_d83d7d67c7b301::t_884f77cfc7c1ee 130
+  s_d83d7d67c7b301::t_1668318a30c5c2 45,47
+  s_d83d7d67c7b301::t_165d402ac4248e 54-55,101
+src/hooks/useAccurateTimeCounter.ts
+  s_d83d7d67c7b301::t_165d402ac4248e 48
+src/App.module.less
+  s_d83d7d67c7b301::t_ff977b50e61653 408-409
+  s_d83d7d67c7b301::t_d153f03b60d842 317-322,344-349,371-376
+  s_d83d7d67c7b301::t_dcf7338ddd9efb 15
+  s_d83d7d67c7b301::t_868b742c2aa46c 124,136,148
+  s_d83d7d67c7b301::t_43367ceb25a26b 213,233,254,257,281,284,303,306
+  s_d83d7d67c7b301::t_325a81ab9d6513 30-32,53,58-59,107,114,125-127,137-139,149-151,177-180,438-439
+  s_d83d7d67c7b301::t_5901f623c75a57 87-89,92-94
+  s_d83d7d67c7b301::t_0ac4772498e142 424,430-437,440
+  s_d83d7d67c7b301::t_aa754f0a04d985 496-504
+  s_d83d7d67c7b301::t_b232cea80a0868 111-113,116-118
+  s_d83d7d67c7b301::t_023158996364d1 505-506
+src/global.less
+  s_d83d7d67c7b301::t_67187c880ae170 1-24,28-48
+  s_d83d7d67c7b301::t_8606e293b9db4b 25-27
+  s_d83d7d67c7b301::t_78da5ee2bd13e0 65
+  s_d83d7d67c7b301::t_cc093c2a728a25 59,66-83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "96734d8174669e5b6e2996b53205a4cef7ce3484",
+  "prompts": {},
+  "sessions": {
+    "s_d83d7d67c7b301": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe684ef0-3339-499a-b695-89620d3c02ec",
+        "model": "muse-wonder-1.0"
+      },
+      "human_author": "Loren <x>"
+    }
+  }
+}

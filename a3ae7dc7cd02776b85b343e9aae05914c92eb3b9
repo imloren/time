@@ -1,0 +1,49 @@
+.github/workflows/ci.yml
+  s_9837565853f96c::t_238242b85a6f89 6-7,10-11,14-16,21-22,27,45-63
+  s_9837565853f96c::t_ff07db4588d31b 36,40
+package.json
+  s_f5fbdafea0c6bb::t_8683fa48300dda 18-19
+biome.json
+  s_06416f86c437c7::t_421e56a8b01963 44
+  s_06416f86c437c7::t_802c7a7953b062 33
+  s_06416f86c437c7::t_2e934c2ffe4881 3
+  s_06416f86c437c7::t_4ca067047d1868 48
+.github/dependabot.yml
+  s_9837565853f96c::t_3374be765f735d 1-6
+.bun-version
+  s_9837565853f96c::t_cc3801087e6057 1
+bun.lock
+  s_9837565853f96c::t_66d52128440662 8-9,310,312,314,346-357
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a3ae7dc7cd02776b85b343e9aae05914c92eb3b9",
+  "prompts": {},
+  "sessions": {
+    "s_06416f86c437c7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "44bfc167-ed8f-4e54-aace-a61cbf570ae2",
+        "model": "muse-wonder-1.0"
+      },
+      "human_author": "Loren <x>"
+    },
+    "s_9837565853f96c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a39e6de1-8f30-4584-90eb-180ec5400275",
+        "model": "muse-wonder-1.0"
+      },
+      "human_author": "Loren <x>"
+    },
+    "s_f5fbdafea0c6bb": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ffbbeb5c-17c1-4570-9477-a14fbdf9233d",
+        "model": "muse-wonder-1.0"
+      },
+      "human_author": "Loren <x>"
+    }
+  }
+}
