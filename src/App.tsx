@@ -282,7 +282,7 @@ async function shareStory() {
   if (navigator.share) {
     try {
       await navigator.share({
-        title: '我们的故事 · 从初见，到余生',
+        title: '💍 Xinlü & Xiongjian · From Hello to Forever',
         text: '从初见，到余生。故事还在继续。',
         url: url.href,
       })
